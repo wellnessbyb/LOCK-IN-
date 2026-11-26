@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The 30-Day Lock-In: Early Access</title>
+<style>
+:root{--black:#0b0b0b;--panel:#161412;--gold:#d4af37;--yellow:#f5c518;--cream:#f6efe0;--muted:#b9ae96;--line:#3a3220;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--black);color:var(--cream);font-family:Georgia,"Times New Roman",serif;line-height:1.55;-webkit-text-size-adjust:100%}
+.wrap{max-width:520px;margin:0 auto;padding:28px 20px 40px}
+.brand{text-align:center;letter-spacing:.28em;font-size:.72rem;color:var(--gold);text-transform:uppercase;font-family:Arial,Helvetica,sans-serif}
+.crown{text-align:center;font-size:2rem;margin:10px 0 0}
+h1{font-size:2.3rem;line-height:1.1;text-align:center;margin:10px 0 6px;color:var(--gold);font-weight:700}
+.sub{text-align:center;color:var(--cream);font-size:1.08rem;margin:0 0 6px}
+.dates{text-align:center;color:var(--yellow);font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 22px}
+.list{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:8px}
+.list li{padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel);font-size:.95rem}
+.list li::before{content:"✦ ";color:var(--gold)}
+.card{background:var(--panel);border:1px solid var(--gold);border-radius:18px;padding:22px 18px}
+.card h2{margin:0 0 4px;font-size:1.45rem;color:var(--cream);text-align:center}
+.card p.note{margin:0 0 16px;text-align:center;color:var(--muted);font-size:.9rem}
+label{display:block;font-family:Arial,Helvetica,sans-serif;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin:14px 0 6px}
+label small{text-transform:none;letter-spacing:0;color:var(--muted)}
+input[type=text],input[type=email],input[type=tel],select{width:100%;padding:14px;font-size:16px;border-radius:10px;border:1px solid var(--line);background:#0f0e0c;color:var(--cream);font-family:Arial,Helvetica,sans-serif}
+input:focus,select:focus{outline:2px solid var(--yellow);outline-offset:1px}
+.check{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-family:Arial,Helvetica,sans-serif;font-size:.78rem;line-height:1.45;color:var(--muted);text-transform:none;letter-spacing:0}
+.check input{margin-top:3px;width:20px;height:20px;flex:none;accent-color:var(--gold)}
+.check.off{opacity:.45}
+button{width:100%;margin-top:22px;padding:16px;border:0;border-radius:999px;background:linear-gradient(135deg,var(--yellow),var(--gold));color:#111;font-size:1.05rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-family:Arial,Helvetica,sans-serif;cursor:pointer}
+button:disabled{opacity:.6}
+.err{color:#ff9b8a;font-family:Arial,Helvetica,sans-serif;font-size:.85rem;margin-top:12px;display:none}
+.thanks{display:none;text-align:center;padding:10px 4px}
+.thanks h2{color:var(--gold);font-size:1.7rem;margin:6px 0}
+.preview{display:none;margin:0 0 16px;padding:10px 12px;border:1px dashed var(--yellow);border-radius:10px;color:var(--yellow);font-family:Arial,Helvetica,sans-serif;font-size:.78rem;text-align:center}
+.about{margin:26px 0 0;text-align:center;font-size:.95rem;color:var(--muted)}
+.about b{color:var(--cream)}
+footer{margin-top:28px;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:.72rem;color:var(--muted);line-height:1.6}
+footer a{color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">Brandie Nichols · The Wealth &amp; Wellness Coach</div>
+  <div class="crown">👑</div>
+  <h1>The 30-Day Lock-In</h1>
+  <p class="sub">December Is Personal.</p>
+  <p class="dates">Virtual experience · Dec 1–30, 2026</p>
+
+  <ul class="list">
+    <li>Meal guide that keeps it simple</li>
+    <li>Virtual workouts you can do anywhere</li>
+    <li>1:1 coaching check-ins</li>
+    <li>Daily accountability and a private group of women</li>
+  </ul>
+
+  <div class="card" id="card">
+    <div class="preview" id="preview">Preview mode: submissions are not being saved yet.</div>
+    <div id="formArea">
+      <h2>Get early access to The 30-Day Lock-In.</h2>
+      <p class="note">Early access opens Black Friday, 6 AM, before the public.</p>
+      <form id="f" novalidate>
+        <input type="hidden" name="source" value="ig">
+        <input type="hidden" name="tags" id="tags" value="waitlist,source-ig">
+        <label for="fn">First name</label>
+        <input type="text" id="fn" name="first_name" autocomplete="given-name" required>
+        <label for="em">Email</label>
+        <input type="email" id="em" name="email" autocomplete="email" required>
+        <label for="ph">Mobile number <small>(optional)</small></label>
+        <input type="tel" id="ph" name="phone" autocomplete="tel" inputmode="tel">
+        <label for="goal">Primary wellness goal</label>
+        <select id="goal" name="goal" required>
+          <option value="">Choose one</option>
+          <option>Nutrition</option>
+          <option>Consistent workouts</option>
+          <option>Discipline and focus</option>
+          <option>Energy and stress</option>
+          <option>Finish the year strong</option>
+        </select>
+
+        <label class="check" for="c_email"><input type="checkbox" id="c_email" name="email_consent" value="yes">
+          <span>Yes, send me emails about The 30-Day Lock-In and other offers from Brandie Nichols. I can unsubscribe anytime.</span></label>
+
+        <label class="check off" for="c_sms" id="smsLabel"><input type="checkbox" id="c_sms" name="sms_consent" value="yes" disabled>
+          <span>By checking this box and entering my number, I agree to receive recurring text messages from The Wealth &amp; Wellness Coach about The 30-Day Lock-In, including offers and reminders. Consent is not a condition of purchase. Msg and data rates may apply. Msg frequency varies. Reply STOP to cancel, HELP for help. See <a href="#privacy" style="color:#d4af37">Privacy Policy</a> and <a href="#terms" style="color:#d4af37">Terms</a>.</span></label>
+
+        <div class="err" id="err"></div>
+        <button type="submit" id="btn">Save My Spot</button>
+      </form>
+    </div>
+    <div class="thanks" id="thanks">
+      <div style="font-size:2rem">👑</div>
+      <h2>You’re on the list!</h2>
+      <p>Check your inbox. Early access opens Black Friday, 6 AM.</p>
+    </div>
+  </div>
+
+  <p class="about">I’ve lost over 100 pounds and supported over 200 clients. <b>This isn’t about perfection. It’s about showing up for yourself.</b></p>
+
+  <footer>
+    <a href="#privacy">Privacy Policy</a> · <a href="#terms">Terms</a><br>
+    Not medical advice. Check with your healthcare provider before starting any new nutrition or exercise program. Individual results vary.<br>
+    © 2026 The Wealth &amp; Wellness Coach
+  </footer>
+</div>
+
+<script>
+// ---- SET THIS when you connect your email tool (MailerLite, Flodesk, etc.) ----
+var FORM_ACTION = "";   // paste your form's submit URL here
+// ---------------------------------------------------------------------------------
+var f=document.getElementById("f"),ph=document.getElementById("ph"),sms=document.getElementById("c_sms"),
+    smsLabel=document.getElementById("smsLabel"),err=document.getElementById("err"),btn=document.getElementById("btn");
+if(!FORM_ACTION){document.getElementById("preview").style.display="block";}
+ph.addEventListener("input",function(){
+  var has=ph.value.replace(/\D/g,"").length>=10;
+  sms.disabled=!has; smsLabel.classList.toggle("off",!has);
+  if(!has) sms.checked=false;
+});
+function show(m){err.textContent=m;err.style.display="block";}
+f.addEventListener("submit",function(e){
+  e.preventDefault(); err.style.display="none";
+  var fn=f.first_name.value.trim(),em=f.email.value.trim();
+  if(!fn) return show("Please add your first name.");
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) return show("Please enter a valid email.");
+  if(!f.goal.value) return show("Please choose your main goal.");
+  if(!f.email_consent.checked) return show("Please check the email box so we can send your early-access link.");
+  var tags=["waitlist","goal-"+f.goal.value.toLowerCase().replace(/[^a-z]+/g,"-").replace(/-$/,""),"email-optin","source-ig"];
+  if(f.sms_consent.checked) tags.push("sms-optin");
+  document.getElementById("tags").value=tags.join(",");
+  function done(){
+    document.getElementById("formArea").style.display="none";
+    document.getElementById("thanks").style.display="block";
+    window.scrollTo(0,0);
+  }
+  if(!FORM_ACTION){return done();}
+  btn.disabled=true;
+  var fd=new FormData(f); fd.append("consent_time",new Date().toISOString());
+  fetch(FORM_ACTION,{method:"POST",body:fd,mode:"no-cors"}).then(done).catch(function(){btn.disabled=false;show("Something went wrong. Please try again.");});
+});
+</script>
+</body>
+</html>
